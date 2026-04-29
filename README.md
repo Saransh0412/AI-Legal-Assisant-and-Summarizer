@@ -50,7 +50,7 @@ LegalCompanion/
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/Anshul-ydv/Legal-ai.git
+git clone https://github.com/Saransh0412/AI-Legal-Assisant-and-Summarizer
 cd LegalCompanion
 ````
 
