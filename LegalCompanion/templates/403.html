@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}Forbidden - LexAssist{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="error-container">
+        <div class="row justify-content-center">
+            <div class="col-md-8 text-center">
+                <div class="error-code">403</div>
+                <h1 class="error-message mb-4">Access Forbidden</h1>
+                <p class="lead mb-4">You don't have permission to access this resource.</p>
+                
+                <svg class="mb-4" width="150" height="150" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                    <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                    <circle cx="12" cy="16" r="1"></circle>
+                </svg>
+                
+                <div class="d-grid gap-2 d-md-block">
+                    <a href="{{ url_for('dashboard') }}" class="btn btn-primary btn-lg me-md-2">
+                        <i class="fas fa-home me-2"></i>Go to Dashboard
+                    </a>
+                    <a href="{{ url_for('index') }}" class="btn btn-outline-secondary btn-lg">
+                        <i class="fas fa-arrow-left me-2"></i>Back to Home
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

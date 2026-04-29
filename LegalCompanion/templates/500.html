@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}Server Error - LexAssist{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="error-container">
+        <div class="row justify-content-center">
+            <div class="col-md-8 text-center">
+                <div class="error-code">500</div>
+                <h1 class="error-message mb-4">Server Error</h1>
+                <p class="lead mb-4">Something went wrong on our end. We're working to fix the issue.</p>
+                
+                <svg class="mb-4" width="150" height="150" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+                    <line x1="12" y1="9" x2="12" y2="13"></line>
+                    <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                </svg>
+                
+                <div class="d-grid gap-2 d-md-block">
+                    <a href="{{ url_for('index') }}" class="btn btn-primary btn-lg me-md-2">
+                        <i class="fas fa-home me-2"></i>Back to Home
+                    </a>
+                    <button onclick="window.location.reload()" class="btn btn-outline-secondary btn-lg">
+                        <i class="fas fa-sync-alt me-2"></i>Try Again
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
